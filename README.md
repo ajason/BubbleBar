@@ -11,7 +11,6 @@ A modern, customizable SwiftUI tab bar with a bubble effect animation. BubbleBar
 - 🔤 Optional label display for selected tabs
 - 🎭 Customizable shadows and effects
 - 🎬 Independent animations for tab bar and view transitions
-- ♿️ Full accessibility support
 - 📱 iOS 16+ and macOS 14+ support
 
 ## Installation
