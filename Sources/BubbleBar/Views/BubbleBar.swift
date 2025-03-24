@@ -63,6 +63,9 @@ public struct BubbleBarView<Content: View>: View {
                                     showLabel: configuration.showLabels,
                                     action: { selectedTab = index }
                                 )
+                                if index != content.children.indices.last && !configuration.equalItemSizing {
+                                    Spacer()
+                                }
                             }
                         }
                     }

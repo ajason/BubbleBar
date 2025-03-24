@@ -24,7 +24,7 @@ extension BubbleBar {
             shape: AnyShape = AnyShape(Capsule()),
             itemShape: AnyShape = AnyShape(Capsule()),
             padding: EdgeInsets = EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16),
-            equalItemSizing: Bool = true,
+            equalItemSizing: Bool = false,
             shadowRadius: CGFloat = 1,
             shadowColor: Color = .black.opacity(0.2),
             shadowOffset: CGPoint = .zero
