@@ -50,7 +50,6 @@ extension BubbleBar {
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(isSelected ? .isSelected : [])
             .accessibilityHint("Double tap to switch tab")
-            .accessibilityLabel(label.accessibilityLabel ?? "")
         }
     }
 }
