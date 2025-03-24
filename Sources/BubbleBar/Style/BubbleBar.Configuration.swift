@@ -7,6 +7,7 @@ extension BubbleBar {
     public final class Configuration: ObservableObject, Sendable {
         public var style: Style
         public var animation: Animation
+        public var viewTransitionAnimation: Animation
         public var showLabels: Bool
         public var size: CGSize?
         public var shape: AnyShape
@@ -20,6 +21,7 @@ extension BubbleBar {
         public init(
             style: Style = .forest,
             animation: Animation = .spring(response: 0.3, dampingFraction: 0.7),
+            viewTransitionAnimation: Animation = .smooth,
             showLabels: Bool = true,
             size: CGSize? = nil,
             shape: AnyShape = AnyShape(Capsule()),
@@ -32,6 +34,7 @@ extension BubbleBar {
         ) {
             self.style = style
             self.animation = animation
+            self.viewTransitionAnimation = viewTransitionAnimation
             self.showLabels = showLabels
             self.size = size
             self.shape = shape
