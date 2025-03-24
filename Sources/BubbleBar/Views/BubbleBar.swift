@@ -44,7 +44,7 @@ public struct BubbleBarView<Content: View>: View {
                     ForEach(content.children.indices, id: \.self) { index in
                         content.children[index]
                             .opacity(selectedTab == index ? 1 : 0)
-                            .animation(configuration.animation, value: selectedTab)
+                            .animation(.smooth, value: selectedTab)
                     }
                 }
             }
