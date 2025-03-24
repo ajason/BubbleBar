@@ -3,7 +3,8 @@
 import SwiftUI
 
 extension BubbleBar {
-    @frozen public struct Configuration: Sendable {
+    @MainActor
+    public final class Configuration: ObservableObject, Sendable {
         public var style: Style
         public var animation: Animation
         public var showLabels: Bool
@@ -45,7 +46,8 @@ extension BubbleBar {
 }
 
 // MARK: - Environment Key
-struct BubbleBarConfigurationKey: EnvironmentKey {
+struct BubbleBarConfigurationKey: @preconcurrency EnvironmentKey {
+    @MainActor
     static let defaultValue = BubbleBar.Configuration()
 }
 

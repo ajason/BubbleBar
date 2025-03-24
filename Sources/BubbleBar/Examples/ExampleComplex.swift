@@ -22,7 +22,7 @@ internal struct ExampleComplex: View {
                     Label("Spatial", systemImage: "square.grid.2x2")
                 }
         }
-        .bubbleBarAnimation(.smooth)
+        .bubbleBarAnimation(.interactiveSpring)
         .bubbleBarStyle(.nightOwl)
         .showBubbleBarLabels(true)
         .bubbleBarSize(CGSize(width: 350, height: 60))
