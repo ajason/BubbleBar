@@ -105,13 +105,8 @@ Control how items are sized within the bar:
 
 ## Accessibility
 
-BubbleBar includes comprehensive accessibility support:
-- VoiceOver support for all tab items with clear labels and hints
-- High contrast theme for better visibility
-- Clear visual indicators for selected state
-- Proper accessibility traits for selection state
-- Keyboard navigation support
-- Dynamic type compatibility
+BubbleBar includes some accessibility support (Could be better I think)
+I just need to deep dive into accessibility to really know.
 
 ## Requirements
 
