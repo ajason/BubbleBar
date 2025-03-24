@@ -18,7 +18,7 @@ extension BubbleBar {
         
         public init(
             style: Style = .forest,
-            animation: Animation = .interactiveSpring,
+            animation: Animation = .spring(dampingFraction: 0.3, blendDuration: 0.7),
             showLabels: Bool = true,
             size: CGSize? = nil,
             shape: AnyShape = AnyShape(Capsule()),
