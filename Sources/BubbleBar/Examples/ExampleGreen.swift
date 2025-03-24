@@ -18,7 +18,6 @@ internal struct ExampleGreen: View {
                 }
         }
         .bubbleBarStyle(.forest)
-        .bubbleBarItemEqualSizing(true)
     }
 }
 

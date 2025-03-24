@@ -27,7 +27,6 @@ extension BubbleBar {
                         .fill(theme.colors.cardBackground)
                 }
                 .padding(configuration.padding)
-                .animation(configuration.animation, value: theme)
         }
     }
 } 

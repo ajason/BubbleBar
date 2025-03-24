@@ -34,7 +34,7 @@ extension BubbleBar {
                 .frame(minWidth: 20, maxWidth: isSelected && configuration.equalItemSizing ? .infinity : nil)
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
-                .layoutPriority(isSelected ? 1 : 0)
+                .fixedSize(horizontal: configuration.equalItemSizing ? false : true, vertical: false)
                 .background {
                     if isSelected {
                         configuration.itemShape
@@ -45,8 +45,6 @@ extension BubbleBar {
             }
             .buttonStyle(.plain)
             .frame(maxWidth: configuration.equalItemSizing ? .infinity : nil)
-            .fixedSize(horizontal: configuration.equalItemSizing ? false : true, vertical: false)
-            .animation(configuration.animation, value: isSelected)
             .accessibilityElement(children: .combine)
             .accessibilityAddTraits(isSelected ? .isSelected : [])
             .accessibilityHint("Double tap to switch tab")
