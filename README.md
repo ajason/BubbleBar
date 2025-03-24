@@ -1,4 +1,6 @@
 
+# BubbleBar
+
 <img src="https://github.com/user-attachments/assets/57228e48-9d6b-4d4d-84d7-33c9371f16df" width="100%">
 
 A modern, customizable SwiftUI tab bar with a bubble effect animation. BubbleBar provides a sleek and intuitive navigation experience for iOS and macOS applications.
@@ -84,30 +86,30 @@ BubbleBarView(selectedTab: $selectedTab) {
 - `.ocean` - Cool blue tones
 - Or create your own!
 
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
   <div>
-    <img src="https://github.com/user-attachments/assets/d6a06b03-9fab-4763-97bd-59fff6f24f55" width="100%" alt="Desert Theme">
-    <p align="center"><strong>Desert</strong> - Warm orange and beige tones</p>
+    <img src="https://github.com/user-attachments/assets/d6a06b03-9fab-4763-97bd-59fff6f24f55" width="50%" alt="Desert Theme" style="display: block; margin: 0 auto;">
+    <p><strong>Desert</strong> - Warm orange and beige tones</p>
   </div>
   <div>
-    <img src="https://github.com/user-attachments/assets/565b436d-ba72-4ebd-93c5-b0ceb98ca2e0" width="100%" alt="Forest Theme">
-    <p align="center"><strong>Forest</strong> - Natural green theme</p>
+    <img src="https://github.com/user-attachments/assets/565b436d-ba72-4ebd-93c5-b0ceb98ca2e0" width="50%" alt="Forest Theme" style="display: block; margin: 0 auto;">
+    <p><strong>Forest</strong> - Natural green theme</p>
   </div>
   <div>
-    <img src="https://github.com/user-attachments/assets/a9d3ad7e-8310-4ff1-9c24-414a593c34dd" width="100%" alt="Ocean Theme">
-    <p align="center"><strong>Ocean</strong> - Cool blue tones</p>
+    <img src="https://github.com/user-attachments/assets/a9d3ad7e-8310-4ff1-9c24-414a593c34dd" width="50%" alt="Ocean Theme" style="display: block; margin: 0 auto;">
+    <p><strong>Ocean</strong> - Cool blue tones</p>
   </div>
   <div>
-    <img src="https://github.com/user-attachments/assets/3aecba08-e5e3-4e89-96cc-55ee3a3b656d" width="100%" alt="High Contrast Theme">
-    <p align="center"><strong>High Contrast</strong> - Dark blue theme for night use</p>
+    <img src="https://github.com/user-attachments/assets/3aecba08-e5e3-4e89-96cc-55ee3a3b656d" width="50%" alt="High Contrast Theme" style="display: block; margin: 0 auto;">
+    <p><strong>High Contrast</strong> - Dark blue theme for night use</p>
   </div>
   <div>
-    <img src="https://github.com/user-attachments/assets/25316f83-ffbe-4e9c-b90c-1448ade11010" width="100%" alt="Dark Theme">
-    <p align="center"><strong>Dark</strong> - Dark mode optimized with blue accents</p>
+    <img src="https://github.com/user-attachments/assets/25316f83-ffbe-4e9c-b90c-1448ade11010" width="50%" alt="Dark Theme" style="display: block; margin: 0 auto;">
+    <p><strong>Dark</strong> - Dark mode optimized with blue accents</p>
   </div>
   <div>
-    <img src="https://github.com/user-attachments/assets/a91922a1-228f-48a5-8f82-289ac56fa6ad" width="100%" alt="Night Owl Theme">
-    <p align="center"><strong>Night Owl</strong> - Cool blue tones Dark blue theme for night use</p>
+    <img src="https://github.com/user-attachments/assets/a91922a1-228f-48a5-8f82-289ac56fa6ad" width="50%" alt="Night Owl Theme" style="display: block; margin: 0 auto;">
+    <p><strong>Night Owl</strong> - Cool blue tones Dark blue theme for night use</p>
   </div>
 </div>
 
@@ -118,6 +120,44 @@ BubbleBar provides two separate animation modifiers:
 2. `bubbleBarViewTransition(_:)` - Controls the animation of view transitions between tabs
 
 This separation allows for fine-tuned control over different aspects of the animation.
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
+  <div>
+    <img src="https://github.com/user-attachments/assets/8e030d18-943a-4d94-b68b-e932fa27313b" width="50%" alt="Default Animation" style="display: block; margin: 0 auto;">
+    <p><strong>Default</strong> - Standard animation</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/12d8471a-949b-4992-aee1-42c61b21bc34" width="50%" alt="Ease In Out Animation" style="display: block; margin: 0 auto;">
+    <p><strong>.bubbleBarAnimation(.easeInOut)</strong> - Smooth ease in/out timing</p>
+  </div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
+  <div>
+    <img src="https://github.com/user-attachments/assets/60f93b83-2823-43f9-9ca0-717642a37b99" width="50%" alt="Spring Animation" style="display: block; margin: 0 auto;">
+    <p><strong>.bubbleBarAnimation(.spring(bounce: 0.6))</strong> - Bouncy spring effect</p>
+  </div>
+</div>
+
+### Shape Customization
+
+BubbleBar allows you to customize both the container and item shapes:
+
+
+1. `.bubbleBarShape(RoundedRectangle(cornerRadius: 20))` - Container shape
+2. `.bubbleBarItemShape(Capsule())` - Inner items shape
+
+   NOTE: Padding is defaulted to 4 between inner items and outer shape. (Might make customizable)
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
+  <div>
+    <img src="https://github.com/user-attachments/assets/7ca1901b-8f32-43ad-b331-beb861d5d392" width="50%" alt="RoundedRectangle Shape" style="display: block; margin: 0 auto;">
+    <p><strong>Capsule</strong> - Default</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/cbd3437f-c0b6-411c-8074-38e22b014b2f" width="50%" alt="Capsule Shape" style="display: block; margin: 0 auto;">
+    <p><strong>Rounded Rectangle (15) - Rounded Rectangle (11) Inner Item</strong></p>
+  </div>
+</div>
 
 ### Sizing Behavior
 
@@ -144,4 +184,4 @@ I just need to deep dive into accessibility to really know.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
