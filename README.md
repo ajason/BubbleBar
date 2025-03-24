@@ -10,6 +10,7 @@ A modern, customizable SwiftUI tab bar with a bubble effect animation. BubbleBar
 - 📐 Flexible sizing options (fixed or edge-to-edge)
 - 🔤 Optional label display for selected tabs
 - 🎭 Customizable shadows and effects
+- 🎬 Independent animations for tab bar and view transitions
 - ♿️ Full accessibility support
 - 📱 iOS 16+ and macOS 14+ support
 
@@ -62,7 +63,8 @@ BubbleBarView(selectedTab: $selectedTab) {
     // Your tab content here
 }
 .bubbleBarStyle(.ocean)                    // Choose a theme
-.bubbleBarAnimation(.spring())             // Custom animation
+.bubbleBarAnimation(.spring())             // Custom animation for bubble movement
+.bubbleBarViewTransition(.easeInOut)       // Custom animation for view transitions
 .showBubbleBarLabels(true)                 // Show/hide labels
 .bubbleBarSize(CGSize(width: 350, height: 60))  // Optional fixed size
 .bubbleBarShape(RoundedRectangle(cornerRadius: 20))  // Container shape
@@ -80,6 +82,14 @@ BubbleBarView(selectedTab: $selectedTab) {
 - `.nightOwl` - Dark blue theme for night use
 - `.highContrast` - Accessibility optimized theme
 - `.ocean` - Cool blue tones
+
+### Animation Control
+
+BubbleBar provides two separate animation modifiers:
+1. `bubbleBarAnimation(_:)` - Controls the animation of the bubble movement and tab bar changes
+2. `bubbleBarViewTransition(_:)` - Controls the animation of view transitions between tabs
+
+This separation allows for fine-tuned control over different aspects of the animation.
 
 ### Sizing Behavior
 
