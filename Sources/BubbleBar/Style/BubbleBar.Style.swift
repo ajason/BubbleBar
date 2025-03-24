@@ -19,7 +19,7 @@ extension BubbleBar {
             Style(theme: BubbleBar.Theme(colors: .init(
                 cardBackground: Color(red: 0.1, green: 0.1, blue: 0.15),
                 primary: Color.blue,
-                textSecondary: Color(.secondaryLabel),
+                textSecondary: Color(.secondarySystemFill),
                 shadow: Color.black
             )))
         }

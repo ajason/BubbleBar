@@ -16,6 +16,15 @@ internal struct ExampleGreen: View {
                 .tabBarItem {
                     Label("Focus", systemImage: "timer")
                 }
+            Text("Home View")
+                .tabBarItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            
+            Text("Focus View")
+                .tabBarItem {
+                    Label("Focus", systemImage: "timer")
+                }
         }
         .bubbleBarStyle(.forest)
     }
