@@ -165,10 +165,6 @@ You can combine transitions for more complex effects:
     <img src="https://github.com/user-attachments/assets/60f93b83-2823-43f9-9ca0-717642a37b99" width="50%" alt="Spring Animation" style="display: block; margin: 0 auto;">
     <p><strong>.bubbleBarAnimation(.spring(bounce: 0.6))</strong> - Bouncy spring effect</p>
   </div>
-  <div>
-    <img src="https://github.com/user-attachments/assets/example-slide-transition" width="50%" alt="Slide Transition" style="display: block; margin: 0 auto;">
-    <p><strong>.bubbleBarViewTransition(.slide)</strong> - Slide transition effect</p>
-  </div>
 </div>
 
 ### Shape Customization
