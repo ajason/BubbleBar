@@ -82,6 +82,34 @@ BubbleBarView(selectedTab: $selectedTab) {
 - `.nightOwl` - Dark blue theme for night use
 - `.highContrast` - Accessibility optimized theme
 - `.ocean` - Cool blue tones
+- Or create your own!
+
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px;">
+  <div>
+    <img src="https://github.com/user-attachments/assets/d6a06b03-9fab-4763-97bd-59fff6f24f55" width="100%" alt="Desert Theme">
+    <p align="center"><strong>Desert</strong> - Warm orange and beige tones</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/565b436d-ba72-4ebd-93c5-b0ceb98ca2e0" width="100%" alt="Forest Theme">
+    <p align="center"><strong>Forest</strong> - Natural green theme</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/a9d3ad7e-8310-4ff1-9c24-414a593c34dd" width="100%" alt="Ocean Theme">
+    <p align="center"><strong>Ocean</strong> - Cool blue tones</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/3aecba08-e5e3-4e89-96cc-55ee3a3b656d" width="100%" alt="High Contrast Theme">
+    <p align="center"><strong>High Contrast</strong> - Dark blue theme for night use</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/25316f83-ffbe-4e9c-b90c-1448ade11010" width="100%" alt="Dark Theme">
+    <p align="center"><strong>Dark</strong> - Dark mode optimized with blue accents</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/a91922a1-228f-48a5-8f82-289ac56fa6ad" width="100%" alt="Night Owl Theme">
+    <p align="center"><strong>Night Owl</strong> - Cool blue tones Dark blue theme for night use</p>
+  </div>
+</div>
 
 ### Animation Control
 
