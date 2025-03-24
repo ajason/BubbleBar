@@ -18,13 +18,13 @@ extension BubbleBar {
         
         public init(
             style: Style = .forest,
-            animation: Animation = .spring(dampingFraction: 0.3, blendDuration: 0.7),
+            animation: Animation = .spring(response: 0.3, dampingFraction: 0.7),
             showLabels: Bool = true,
             size: CGSize? = nil,
             shape: AnyShape = AnyShape(Capsule()),
             itemShape: AnyShape = AnyShape(Capsule()),
             padding: EdgeInsets = EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16),
-            equalItemSizing: Bool = false,
+            equalItemSizing: Bool = true,
             shadowRadius: CGFloat = 1,
             shadowColor: Color = .black.opacity(0.2),
             shadowOffset: CGPoint = .zero
