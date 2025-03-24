@@ -4,29 +4,43 @@ import SwiftUI
 
 internal struct ExampleGreen: View {
     @State private var selectedTab = 0
+    @Environment(\.theme) var theme
     
     var body: some View {
         BubbleBarView(selectedTab: $selectedTab) {
-            Text("Home View")
+            Color.blue
+                .edgesIgnoringSafeArea(.all)
                 .tabBarItem {
                     Label("Home", systemImage: "house.fill")
                 }
             
-            Text("Focus View")
+            Color.red
+                .edgesIgnoringSafeArea(.all)
                 .tabBarItem {
                     Label("Focus", systemImage: "timer")
                 }
-            Text("Home View")
+            Color.purple
+                .edgesIgnoringSafeArea(.all)
                 .tabBarItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Something", systemImage: "mail.stack")
                 }
             
-            Text("Focus View")
+            Color.green
+                .edgesIgnoringSafeArea(.all)
                 .tabBarItem {
-                    Label("Focus", systemImage: "timer")
+                    Label("Eraser", systemImage: "eraser")
+                }
+            
+            
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+                .tabBarItem {
+                    Label("Grid", systemImage: "grid")
                 }
         }
-        .bubbleBarStyle(.forest)
+        .bubbleBarStyle(.ocean)
+        .bubbleBarViewTransitionAnimation(.bouncy)
+        .bubbleBarViewTransition(.slide)
     }
 }
 

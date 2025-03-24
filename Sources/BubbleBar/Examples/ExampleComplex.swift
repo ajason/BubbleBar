@@ -23,7 +23,7 @@ internal struct ExampleComplex: View {
                 }
         }
         .bubbleBarAnimation(.bouncy)
-        .bubbleBarViewTransition(.snappy)
+        .bubbleBarViewTransition(.opacity)
         .bubbleBarStyle(.desert)
         .showBubbleBarLabels(true)
         .bubbleBarSize(CGSize(width: 350, height: 54)) // Default Height 54

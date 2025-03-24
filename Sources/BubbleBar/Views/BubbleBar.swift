@@ -42,11 +42,13 @@ public struct BubbleBarView<Content: View>: View {
             _VariadicViewAdapter(content) { content in
                 ZStack {
                     ForEach(content.children.indices, id: \.self) { index in
-                        content.children[index]
-                            .opacity(selectedTab == index ? 1 : 0)
-                            .animation(configuration.viewTransitionAnimation, value: selectedTab)
+                        if index == selectedTab {
+                            content.children[index]
+                                .transition(configuration.viewTransition)
+                        }
                     }
                 }
+                .animation(configuration.viewTransitionAnimation, value: selectedTab)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
@@ -114,9 +116,18 @@ public extension View {
     /// Sets the animation used for view transitions between tabs.
     /// - Parameter animation: The animation to apply
     /// - Returns: A view with the modified view transition animation
-    func bubbleBarViewTransition(_ animation: Animation) -> some View {
+    func bubbleBarViewTransitionAnimation(_ animation: Animation) -> some View {
         transformEnvironment(\.bubbleBarConfiguration) { config in
             config.viewTransitionAnimation = animation
+        }
+    }
+    
+    /// Sets the transition effect used for view transitions between tabs.
+    /// - Parameter transition: The transition to apply
+    /// - Returns: A view with the modified view transition
+    func bubbleBarViewTransition(_ transition: AnyTransition) -> some View {
+        transformEnvironment(\.bubbleBarConfiguration) { config in
+            config.viewTransition = transition
         }
     }
     

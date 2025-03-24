@@ -1,4 +1,3 @@
-
 # BubbleBar
 
 <img src="https://github.com/user-attachments/assets/57228e48-9d6b-4d4d-84d7-33c9371f16df" width="100%">
@@ -115,11 +114,41 @@ BubbleBarView(selectedTab: $selectedTab) {
 
 ### Animation Control
 
-BubbleBar provides two separate animation modifiers:
-1. `bubbleBarAnimation(_:)` - Controls the animation of the bubble movement and tab bar changes
-2. `bubbleBarViewTransition(_:)` - Controls the animation of view transitions between tabs
+BubbleBar provides three separate animation modifiers for fine-tuned control over different aspects of the interface:
 
-This separation allows for fine-tuned control over different aspects of the animation.
+1. `bubbleBarAnimation(_:)` - Controls the animation of the bubble movement and tab bar changes
+2. `bubbleBarViewTransitionAnimation(_:)` - Controls the timing and curve of the view transition animation
+3. `bubbleBarViewTransition(_:)` - Controls the type of transition effect between views
+
+Example usage:
+```swift
+BubbleBarView(selectedTab: $selectedTab) {
+    // Your tab content here
+}
+.bubbleBarAnimation(.spring(response: 0.3, dampingFraction: 0.7))  // Bubble movement
+.bubbleBarViewTransitionAnimation(.easeInOut)                      // View transition timing
+.bubbleBarViewTransition(.slide)                                   // View transition effect
+```
+
+Available transition effects include:
+- `.opacity` (default)
+- `.scale`
+- `.slide`
+- `.move(edge:)`
+- `.asymmetric(insertion:removal:)`
+- `.combined(with:)`
+
+You can combine transitions for more complex effects:
+```swift
+// Scale and fade
+.bubbleBarViewTransition(.scale.combined(with: .opacity))
+
+// Slide from right, fade out to left
+.bubbleBarViewTransition(.asymmetric(
+    insertion: .move(edge: .trailing).combined(with: .opacity),
+    removal: .move(edge: .leading).combined(with: .opacity)
+))
+```
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 20px; text-align: center;">
   <div>
@@ -135,6 +164,10 @@ This separation allows for fine-tuned control over different aspects of the anim
   <div>
     <img src="https://github.com/user-attachments/assets/60f93b83-2823-43f9-9ca0-717642a37b99" width="50%" alt="Spring Animation" style="display: block; margin: 0 auto;">
     <p><strong>.bubbleBarAnimation(.spring(bounce: 0.6))</strong> - Bouncy spring effect</p>
+  </div>
+  <div>
+    <img src="https://github.com/user-attachments/assets/example-slide-transition" width="50%" alt="Slide Transition" style="display: block; margin: 0 auto;">
+    <p><strong>.bubbleBarViewTransition(.slide)</strong> - Slide transition effect</p>
   </div>
 </div>
 
