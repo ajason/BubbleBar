@@ -1,4 +1,5 @@
-# BubbleBar
+
+![ezgif-33364b3624caad](https://github.com/user-attachments/assets/57228e48-9d6b-4d4d-84d7-33c9371f16df)
 
 A modern, customizable SwiftUI tab bar with a bubble effect animation. BubbleBar provides a sleek and intuitive navigation experience for iOS and macOS applications.
 
