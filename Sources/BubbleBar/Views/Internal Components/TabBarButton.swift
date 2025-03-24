@@ -31,7 +31,7 @@ extension BubbleBar {
                             .matchedGeometryEffect(id: "LABEL_\(index)", in: namespace)
                     }
                 }
-                .frame(minWidth: 30, maxWidth: isSelected && configuration.equalItemSizing ? .infinity : nil)
+                .frame(minWidth: 20, maxWidth: isSelected && configuration.equalItemSizing ? .infinity : nil)
                 .padding(.horizontal, 8)
                 .padding(.vertical, 8)
                 .layoutPriority(isSelected ? 1 : 0)

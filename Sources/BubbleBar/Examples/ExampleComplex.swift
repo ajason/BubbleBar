@@ -25,7 +25,7 @@ internal struct ExampleComplex: View {
         .bubbleBarAnimation(.smooth)
         .bubbleBarStyle(.nightOwl)
         .showBubbleBarLabels(true)
-//        .bubbleBarSize(CGSize(width: 350, height: 60))
+        .bubbleBarSize(CGSize(width: 350, height: 60))
         .bubbleBarShape(Rectangle())
         .bubbleBarItemShape(Rectangle())
         .bubbleBarItemEqualSizing(false)

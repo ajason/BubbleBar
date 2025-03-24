@@ -16,23 +16,9 @@ internal struct ExampleGreen: View {
                 .tabBarItem {
                     Label("Focus", systemImage: "timer")
                 }
-            
-            Text("Spatial View")
-                .tabBarItem {
-                    Label("Spatial", systemImage: "square.grid.2x2")
-                }
-            
-            Text("Focus View")
-                .tabBarItem {
-                    Label("Focus", systemImage: "timer")
-                }
-            
-            Text("Spatial View")
-                .tabBarItem {
-                    Label("Awareness Of", systemImage: "square.grid.2x2")
-                }
         }
         .bubbleBarStyle(.forest)
+        .bubbleBarItemEqualSizing(true)
     }
 }
 

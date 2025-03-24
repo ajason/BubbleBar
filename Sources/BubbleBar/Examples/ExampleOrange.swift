@@ -9,7 +9,7 @@ struct ExampleOrange: View {
         BubbleBarView(selectedTab: $selectedTab) {
             Text("Home View")
                 .tabBarItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Homecoming", systemImage: "house.fill")
                 }
             
             Text("Focus View")
@@ -21,8 +21,10 @@ struct ExampleOrange: View {
                 .tabBarItem {
                     Label("Spatial", systemImage: "square.grid.2x2")
                 }
+
         }
         .bubbleBarStyle(.desert)
+        
     }
 }
 
