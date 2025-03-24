@@ -26,6 +26,7 @@ extension BubbleBar {
                     configuration.shape
                         .fill(theme.colors.cardBackground)
                 }
+                .clipShape(configuration.shape)
                 .padding(configuration.padding)
         }
     }

@@ -23,12 +23,12 @@ internal struct ExampleComplex: View {
                 }
         }
         .bubbleBarAnimation(.bouncy)
-        .bubbleBarStyle(.nightOwl)
+        .bubbleBarStyle(.desert)
         .showBubbleBarLabels(true)
-        .bubbleBarSize(CGSize(width: 350, height: 60))
-        .bubbleBarShape(Rectangle())
-        .bubbleBarItemShape(Rectangle())
-        .bubbleBarItemEqualSizing(false)
+        .bubbleBarSize(CGSize(width: 350, height: 54)) // Default Height 54
+        .bubbleBarShape(RoundedRectangle(cornerRadius: 15))
+        .bubbleBarItemShape(RoundedRectangle(cornerRadius: 11))
+        .bubbleBarItemEqualSizing(true)
         .bubbleBarPadding(.zero)
     }
 }
