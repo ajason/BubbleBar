@@ -26,11 +26,12 @@ internal struct ExampleComplex: View {
         .bubbleBarViewTransition(.opacity)
         .bubbleBarStyle(.desert)
         .showBubbleBarLabels(true)
-        .bubbleBarSize(CGSize(width: 350, height: 54)) // Default Height 54
+        .bubbleBarSize(CGSize(width: 150, height: 54)) // Default Height 54
         .bubbleBarShape(RoundedRectangle(cornerRadius: 15))
         .bubbleBarItemShape(RoundedRectangle(cornerRadius: 11))
         .bubbleBarItemEqualSizing(true)
-        .bubbleBarPadding(.zero)
+        .bubbleBarPadding(.init(top: 0.0, leading: 10.0, bottom: 0.0, trailing: 0.0))
+        .bubbleBarAlignment(.leading)
     }
 }
 
